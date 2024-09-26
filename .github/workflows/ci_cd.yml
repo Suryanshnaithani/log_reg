@@ -17,7 +17,7 @@ jobs:
         run: |
           pip install -r requirements.txt
       - name: Run tests
-        run: pytest --cov=src/test.py
+        run: pytest --cov=src
       - name: Deploy model (if tests pass)
         if: ${{ steps.test.outcome == 'success' }}
         run: |
